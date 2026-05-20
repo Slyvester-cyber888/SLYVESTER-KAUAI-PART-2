@@ -13,16 +13,16 @@
 <body>
     <!-- Site header and navigation -->
     <header>
-        <a href='index.html'>
+        <a href='index.html' class="logo">
             <h1>&#127811; Kauai</h1>
         </a>
         
         <nav>
-            <a href='index.html'>Home</a> |
-            <a href='about.html'>About Us</a> |
-            <a href='service.html'>Menu</a> |
-            <a href='inquiry.html'>Enquiry</a> |
-            <a href='contacts.html'>Contact</a>
+            <a href='index.html' class="nav-link">Home</a>
+            <a href='about.html' class="nav-link">About Us</a>
+            <a href='service.html' class="nav-link active">Menu</a>
+            <a href='inquiry.html' class="nav-link">Enquiry</a>
+            <a href='contacts.html' class="nav-link">Contact</a>
         </nav>
     </header>
 
@@ -31,80 +31,112 @@
             <h2>Our Menu</h2>
             <p>Discover real, fresh ingredients combined to give you clean energy for your day.</p>
             
+            <!-- Clean Eating Pledge banner -->
+            <div class="clean-eating-pledge" style="background: rgba(76, 175, 80, 0.08); border: 1.5px dashed var(--c-primary); border-radius: var(--radius-md); padding: var(--s-4); margin-block: var(--s-6); text-align: center;">
+                <h4 style="color: var(--c-primary-dark); margin-bottom: var(--s-1);">&#129382; The Kauai Clean Pledge</h4>
+                <p style="margin: 0; font-size: 0.9375rem; color: var(--c-text-muted);">We are committed to serving you real, wholesome food. That means our ingredients are 100% natural, GMO-free, and completely free from artificial colorants, flavorings, and preservatives.</p>
+            </div>
+            
             <!-- In-page anchor links for easy menu navigation -->
             <nav id="menu-anchors">
-                <a href="#smoothies">Smoothies</a> |
-                <a href="#wraps">Wraps &amp; Salads</a> |
-                <a href="#warm-bowls">Warm Bowls</a> |
-                <a href="#breakfast">Breakfast</a>
+                <a href="#smoothies" class="anchor-pill">Smoothies</a>
+                <a href="#wraps" class="anchor-pill">Wraps &amp; Salads</a>
+                <a href="#warm-bowls" class="anchor-pill">Warm Bowls</a>
+                <a href="#breakfast" class="anchor-pill">Breakfast</a>
             </nav>
         </section>
 
         <!-- Smoothies Category Section -->
-        <section id="smoothies">
-            <h3>&#129380; Smoothies &amp; Raw Juices</h3>
-            <img src="images/smoothie.jpg" alt="Green superfood smoothie" width="400" loading="lazy">
-            <!-- Products are grouped within unordered lists -->
-            <ul>
-                <li>
-                    <h4>Peanut Butter Bomb</h4>
-                    <p>Whey protein, sugar-free peanut butter, banana, cacao, fat-free milk.</p>
-                    <p><strong>R75</strong></p>
-                </li>
-                <li>
-                    <h4>GEM (Green Energy Machine)</h4>
-                    <p>Spinach, apple, cucumber, celery, hemp seeds.</p>
-                    <p><strong>R65</strong></p>
-                </li>
-            </ul>
+        <section id="smoothies" class="menu-category">
+            <div class="category-header">
+                <h3>&#129380; Smoothies &amp; Raw Juices</h3>
+                <div class="category-img-wrapper">
+                    <img src="images/smoothie.jpg" alt="Green superfood smoothie" loading="lazy">
+                </div>
+            </div>
+            <div class="category-content">
+                <ul>
+                    <li>
+                        <h4>Peanut Butter Bomb <span class="badge" style="background: var(--c-accent); color: white; font-size: 0.75rem; padding: 0.15rem 0.4rem; border-radius: var(--radius-sm); margin-left: 0.5rem; font-family: var(--f-display); vertical-align: middle;">Fitness Cult-Classic</span></h4>
+                        <p>Whey protein, sugar-free peanut butter, banana, raw cacao, fat-free milk. South Africa's most loved post-workout protein blend.</p>
+                        <p><strong>R75</strong></p>
+                    </li>
+                    <li>
+                        <h4>Strawberry Stinger <span class="badge" style="background: var(--c-primary); color: white; font-size: 0.75rem; padding: 0.15rem 0.4rem; border-radius: var(--radius-sm); margin-left: 0.5rem; font-family: var(--f-display); vertical-align: middle;">All-Time Classic</span></h4>
+                        <p>Strawberries, banana, apple juice, frozen yoghurt. The legendary sweet-and-creamy smoothie that started the craze in 1996.</p>
+                        <p><strong>R68</strong></p>
+                    </li>
+                    <li>
+                        <h4>GEM (Green Energy Machine)</h4>
+                        <p>Spinach, apple, cucumber, celery, hemp seeds. Packed with active greens for full-body replenishment.</p>
+                        <p><strong>R65</strong></p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Wraps & Salads Category Section -->
-        <section id="wraps">
-            <h3>&#129367; Wraps &amp; Salads</h3>
-            <img src="images/wrap.jpg" alt="Fresh chicken and avocado wrap" width="400" loading="lazy">
-            <ul>
-                <li>
-                    <h4>Princess Wrap</h4>
-                    <p>Free-range chicken, avocado, feta, tomatoes, carrot, celery &amp; onion mayo.</p>
-                    <p><strong>R89</strong></p>
-                </li>
-                <li>
-                    <h4>Harvest Salad</h4>
-                    <p>Roasted butternut, baby spinach, feta, cherry tomatoes, and a light vinaigrette.</p>
-                    <p><strong>R79</strong></p>
-                </li>
-            </ul>
+        <section id="wraps" class="menu-category">
+            <div class="category-header">
+                <h3>&#129367; Wraps &amp; Salads</h3>
+                <div class="category-img-wrapper">
+                    <img src="images/wrap.jpg" alt="Fresh chicken and avocado wrap" loading="lazy">
+                </div>
+            </div>
+            <div class="category-content">
+                <ul>
+                    <li>
+                        <h4>Princess Wrap <span class="badge" style="background: var(--c-accent); color: white; font-size: 0.75rem; padding: 0.15rem 0.4rem; border-radius: var(--radius-sm); margin-left: 0.5rem; font-family: var(--f-display); vertical-align: middle;">Best Seller</span></h4>
+                        <p>Free-range chicken, fresh avocado, feta, tomatoes, carrot, celery &amp; onion mayo. Our iconic, most-ordered signature wrap since the beginning.</p>
+                        <p><strong>R89</strong></p>
+                    </li>
+                    <li>
+                        <h4>Harvest Salad</h4>
+                        <p>Roasted butternut, baby spinach, feta, cherry tomatoes, and a light vinaigrette. Rich in nutrients and flavor.</p>
+                        <p><strong>R79</strong></p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Warm Bowls Category Section -->
-        <section id="warm-bowls">
-            <h3>&#127858; Warm Bowls</h3>
-            <img src="images/bowl.jpg" alt="Warm protein bowl" width="400" loading="lazy">
-            <ul>
-                <li>
-                    <h4>Mexi Bowl</h4>
-                    <p>Spicy chicken breast, brown rice, black beans, corn, warm salsa, and avocado.</p>
-                    <p><strong>R95</strong></p>
-                </li>
-                <li>
-                    <h4>Thai Crunch Bowl</h4>
-                    <p>Seared tofu, edamame, shredded cabbage, carrots, chili peanut dressing, and sesame seeds.</p>
-                    <p><strong>R85</strong></p>
-                </li>
-            </ul>
+        <section id="warm-bowls" class="menu-category">
+            <div class="category-header">
+                <h3>&#127858; Warm Bowls</h3>
+                <div class="category-img-wrapper">
+                    <img src="images/bowl.jpg" alt="Warm protein bowl" loading="lazy">
+                </div>
+            </div>
+            <div class="category-content">
+                <ul>
+                    <li>
+                        <h4>Mexi Bowl</h4>
+                        <p>Spicy chicken breast, brown rice, black beans, corn, warm salsa, and avocado.</p>
+                        <p><strong>R95</strong></p>
+                    </li>
+                    <li>
+                        <h4>Thai Crunch Bowl</h4>
+                        <p>Seared tofu, edamame, shredded cabbage, carrots, chili peanut dressing, and sesame seeds.</p>
+                        <p><strong>R85</strong></p>
+                    </li>
+                </ul>
+            </div>
         </section>
         
         <!-- Breakfast Category Section -->
-        <section id="breakfast">
-            <h3>&#9749; Breakfast</h3>
-            <ul>
-                <li>
-                    <h4>Smashed Avo Toast</h4>
-                    <p>Smashed avocado on sourdough with a squeeze of lemon and chili flakes.</p>
-                    <p><strong>R59</strong></p>
-                </li>
-            </ul>
+        <section id="breakfast" class="menu-category text-only-category">
+            <div class="category-header">
+                <h3>&#9749; Breakfast Specials</h3>
+            </div>
+            <div class="category-content">
+                <ul>
+                    <li>
+                        <h4>Smashed Avo Toast</h4>
+                        <p>Smashed avocado on sourdough with a squeeze of lemon and chili flakes.</p>
+                        <p><strong>R59</strong></p>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 
@@ -114,9 +146,9 @@
 
         <h4>Quick Links</h4>
         <nav>
-            <a href='about.html'>Our Story</a> |
-            <a href='service.html'>Our Menu</a> |
-            <a href='inquiry.html'>Franchise &amp; Enquiry</a> |
+            <a href='about.html'>Our Story</a>
+            <a href='service.html'>Our Menu</a>
+            <a href='inquiry.html'>Franchise &amp; Enquiry</a>
             <a href='contacts.html'>Store Locator</a>
         </nav>
 
@@ -127,5 +159,28 @@
         <hr>
         <p>&copy; 2026 Kauai South Africa. All Rights Reserved.</p>
     </footer>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    </script>
 </body>
 </html>

@@ -15,17 +15,17 @@
 <body>
     <!-- Main header containing the brand name and site navigation -->
     <header>
-        <a href='index.html'>
+        <a href='index.html' class="logo">
             <h1>&#127811; Kauai</h1>
         </a>
 
         <!-- Primary site navigation -->
         <nav>
-            <a href='index.html'>Home</a> |
-            <a href='about.html'>About Us</a> |
-            <a href='service.html'>Menu</a> |
-            <a href='inquiry.html'>Enquiry</a> |
-            <a href='contacts.html'>Contact</a>
+            <a href='index.html' class="nav-link active">Home</a>
+            <a href='about.html' class="nav-link">About Us</a>
+            <a href='service.html' class="nav-link">Menu</a>
+            <a href='inquiry.html' class="nav-link">Enquiry</a>
+            <a href='contacts.html' class="nav-link">Contact</a>
         </nav>
     </header>
 
@@ -33,39 +33,57 @@
     <main>
         <!-- Hero section introducing the brand with a call to action -->
         <section id="hero">
-            <img src="images/hero-banner.jpg" alt="A fresh assortment of Kauai salads and smoothies" width="960">
-            <h2>Fresh Food for the Active Soul</h2>
-            <p>Nourishing South Africans with real, wholesome food made fresh to order every day.</p>
-            <!-- Call to action directing users to the menu -->
-            <a href='service.html'>Explore Our Menu &rarr;</a>
+            <div class="hero-bg">
+                <img src="images/hero-banner.jpg" alt="A fresh assortment of Kauai salads and smoothies" loading="eager">
+            </div>
+            <div class="hero-content">
+                <h2>Fresh Food for the Active Soul</h2>
+                <p>Pioneering South Africa's healthy food movement since 1996. Real, wholesome, and made fresh to order.</p>
+                <!-- Call to action directing users to the menu -->
+                <a href='service.html' class="btn-cta">Explore Our Menu <span class="arrow">&rarr;</span></a>
+            </div>
         </section>
 
         <!-- Highlights section displaying key product categories -->
         <section id="menu-highlights">
-            <h2>Our Favourites</h2>
-            <p>Freshly prepared, full of flavour.</p>
+            <div class="section-header">
+                <h2>Our Favourites</h2>
+                <p>Freshly prepared, full of flavour.</p>
+            </div>
 
             <ul>
                 <!-- Highlight item 1 -->
                 <li>
-                    <img src="images/wrap.jpg" alt="Fresh chicken and avocado wrap" width="400" loading="lazy">
-                    <h4>Signature Wraps</h4>
-                    <p>Delicious, freshly made wraps bursting with flavor.</p>
-                    <a href='service.html#wraps'>View Wraps</a>
+                    <div class="card-img-wrapper">
+                        <img src="images/wrap.jpg" alt="Fresh chicken and avocado wrap" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h4>Signature Wraps</h4>
+                        <p>Home of the legendary Princess Wrap, freshly rolled with premium, wholesome ingredients.</p>
+                        <a href='service.html#wraps'>View Wraps</a>
+                    </div>
                 </li>
                 <!-- Highlight item 2 -->
                 <li>
-                    <img src="images/smoothie.jpg" alt="Green superfood smoothie" width="400" loading="lazy">
-                    <h4>Superfood Smoothies</h4>
-                    <p>Packed with vitamins and nutrients for your daily boost.</p>
-                    <a href='service.html#smoothies'>View Smoothies</a>
+                    <div class="card-img-wrapper">
+                        <img src="images/smoothie.jpg" alt="Green superfood smoothie" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h4>Superfood Smoothies</h4>
+                        <p>Try South Africa's cult-favorite Peanut Butter Bomb and iconic classic smoothies.</p>
+                        <a href='service.html#smoothies'>View Smoothies</a>
+                    </div>
                 </li>
                 <!-- Highlight item 3 -->
                 <li>
-                    <img src="images/bowl.jpg" alt="Warm protein bowl" width="400" loading="lazy">
-                    <h4>Power Bowls</h4>
-                    <p>Energizing warm bowls tailored for maximum nourishment and performance.</p>
-                    <a href='service.html#warm-bowls'>View Bowls</a>
+                    <div class="card-img-wrapper">
+                        <img src="images/bowl.jpg" alt="Warm protein bowl" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h4>Power Bowls</h4>
+                        <p>Energizing warm bowls tailored for maximum nourishment and performance.</p>
+                        <a href='service.html#warm-bowls'>View Bowls</a>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -73,8 +91,8 @@
         <!-- Wellness philosophy block directing to store locator -->
         <section id="philosophy">
             <h2>The Kauai Philosophy</h2>
-            <p>We believe that healthy food should be accessible, delicious, and convenient. Find your nearest store today and grab a freshly made meal!</p>
-            <a href='contacts.html'>Find a Store Near You</a>
+            <p>Rooted in our Hawaiian-inspired heritage and established in Cape Town in 1996, we believe that healthy food should be accessible, delicious, and free from compromise. With over 170 locations nationwide, your next nutritious boost is always close by.</p>
+            <a href='contacts.html' class="btn-cta">Find a Store Near You</a>
         </section>
     </main>
 
@@ -85,9 +103,9 @@
 
         <h4>Quick Links</h4>
         <nav>
-            <a href='about.html'>Our Story</a> |
-            <a href='service.html'>Our Menu</a> |
-            <a href='inquiry.html'>Franchise &amp; Enquiry</a> |
+            <a href='about.html'>Our Story</a>
+            <a href='service.html'>Our Menu</a>
+            <a href='inquiry.html'>Franchise &amp; Enquiry</a>
             <a href='contacts.html'>Store Locator</a>
         </nav>
 
@@ -98,5 +116,28 @@
         <hr>
         <p>&copy; 2026 Kauai South Africa. All Rights Reserved. Prepared for WEDE5020 Part 1 Project.</p>
     </footer>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    </script>
 </body>
 </html>
